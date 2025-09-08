@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/predict.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <ul class="menu">
+        <li><a class="title" href="{{url_for('index')}}">ArtiFact</a></li>
+        <li><a class="other" href="{{url_for('predict')}}">Predict</a></li>
+        <li><a class="other" href="{{url_for('styles')}}">Styles</a></li>
+    </ul>
+    <div class="content">
+        <div class="des">
+            <h2>Upload an image</h2>
+            <h2>to classify it!</h2>
+            <form action="/", method="post" enctype = "multipart/form-data">
+                <input type="file" name="imagefile" class = "uploadButton" >
+                <input type="submit" class = "submitButton" value="Predict">
+            </form>
+        </div>
+        <div class="image">
+            <img src="../static/images/{{filename}}" />
+    
+        </div>
+        
+        <div class="answer">
+            {% if prediction %}
+                <p>This style of art is {{prediction}}!</p>
+            {% endif%}
+        </div>
+        
+        
+    </div>
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+</body>
+</html> 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <ul class="menu">
+        <li><a class="title" href="{{url_for('index')}}">ArtiFact</a></li>
+        <li><a class="other" href="{{url_for('predict')}}">Predict</a></li>
+        <li><a class="other" href="{{url_for('styles')}}">Styles</a></li>
+    </ul>
+    <img src="../static/images/hero.jpeg">
+    <button  id="b" class="button">Predict!</button>
+    <script>
+        document.getElementById("b").onclick = function () {
+          location.href = "predict";
+        };
+      </script>
+    <h2>ArtiFact allows you to classify any work of art into its artistic style or movement. Backed by a well-trained convolutional neural network, ArtiFact consistently achieves an accuracy of about 86% and classifies almost instantly. Information about these styles and movements and their typical characteristics are also provided with some examples. </h2>
+</body>
+</html>
